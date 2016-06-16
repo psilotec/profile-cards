@@ -12,7 +12,7 @@ const App = () => {
             <PeopleList />
         </div>
     );
-;}
+};
 
 //After Meteor loads in the browser, render app to the DOM
 Meteor.startup(() => {
