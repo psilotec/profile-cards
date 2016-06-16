@@ -4,10 +4,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import PeopleList from './components/people_list';
 
 const App = () => {
     return (
-        <div>Hello!</div>
+        <div>
+            <PeopleList />
+        </div>
     );
 ;}
 
