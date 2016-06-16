@@ -4,15 +4,18 @@
 import { Meteor } from 'meteor/meteor';
 import { People } from '../imports/collections/people';
 import _ from 'lodash';
-import { imaage, helpers } from 'faker';
+import { image, helpers } from 'faker';
 
 Meteor.startup(() => {
     //This query will return a cursor
     const numberRecords = People.find({}).count();
 
-    //Check to see if data exists in collection
+    //debug
+    console.log(numberRecords);
+
+    //Check to see if data exists in the People collection
     if (!numberRecords) {
-        //Generate data
+        //Generate data and insert into the People collection
         _.times(5000, () => {
             const { name, email, phone } = helpers.createCard();
 
