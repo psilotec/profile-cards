@@ -4,15 +4,16 @@
 import React from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { People } from '../../imports/collections/people';
+import PersonDetail from './person_detail';
 
 const PeopleList = (props) => {
     //props.people is an array of employee objects returned by the container
-    // that can be used in this component
+    //that can be used in this component
 
   return (
       <div>
           <div className="people-list">
-              People List
+              {props.people.map(people => <PersonDetail />)}
           </div>
       </div>
   );
