@@ -7,13 +7,13 @@ import { People } from '../../imports/collections/people';
 import PersonDetail from './person_detail';
 
 const PeopleList = (props) => {
-    //props.people is an array of employee objects returned by the container
+    //props.people is an array of person objects returned by the container
     //that can be used in this component
 
   return (
       <div>
           <div className="people-list">
-              {props.people.map(people => <PersonDetail />)}
+              {props.people.map(people => <PersonDetail people={people}/>)}
           </div>
       </div>
   );
