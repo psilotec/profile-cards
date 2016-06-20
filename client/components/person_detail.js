@@ -8,7 +8,7 @@ const PersonDetail = ({ people }) => {
 
     return (
         <div className="thumbnail">
-            <img src={avatar} />]
+            <img src={avatar} />
             <div className="caption">
                 <h3>{name}</h3>
                 <ul className="list-group">
