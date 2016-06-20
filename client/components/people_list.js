@@ -6,6 +6,8 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { People } from '../../imports/collections/people';
 import PersonDetail from './person_detail';
 
+const PER_PAGE = 20;
+
 const PeopleList = (props) => {
     //props.people is an array of person objects returned by the container
     //that can be used in this component
@@ -17,13 +19,14 @@ const PeopleList = (props) => {
                   <PersonDetail key={people._id} people={people}/>
               )}
           </div>
+          <button onClick={ () => console.log("Clicked") } className="btn btn-primary">Load More...</button>
       </div>
   );
 };
 
 export default createContainer(() => {
     //Set up subscription
-    Meteor.subscribe('people');
+    Meteor.subscribe('people', PER_PAGE);
 
     //Return an object.  Whatever is returned will be sent to PeopleList
     //component as props.

@@ -27,8 +27,8 @@ Meteor.startup(() => {
     }
 
     //Publish People collection
-    Meteor.publish('people', function() {
+    Meteor.publish('people', function(per_page) {
         //returns a cursor that the subscription can use to get the records it requests
-       return People.find({}, { limit: 20 });
+       return People.find({}, { limit: per_page });
     });
 });
