@@ -19,7 +19,10 @@ const PeopleList = (props) => {
                   <PersonDetail key={people._id} people={people}/>
               )}
           </div>
-          <button onClick={ () => console.log("Clicked") } className="btn btn-primary">Load More...</button>
+          <button onClick={ () => Meteor.subscribe('people', 40) }
+            className="btn btn-primary">
+            Load More...
+          </button>
       </div>
   );
 };

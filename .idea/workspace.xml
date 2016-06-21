@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb84434a-f3b4-40bd-9cec-71606103b915" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/people_list.js" afterPath="$PROJECT_DIR$/client/components/people_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.js" afterPath="$PROJECT_DIR$/server/main.js" />
     </list>
     <ignored path="profile-cards.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +46,8 @@
       <file leaf-file-name="people_list.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/components/people_list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13915417">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.44065484">
+              <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -499,8 +498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/people_list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13915417">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.44065484">
+          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
           <folding />
         </state>
       </provider>
