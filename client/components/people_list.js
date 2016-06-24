@@ -9,6 +9,14 @@ import PersonDetail from './person_detail';
 const PER_PAGE = 20;
 
 class PeopleList extends Component {
+    componentWillMount() {
+        this.page = 1;
+    }
+
+    handleButtonClick() {
+        Meteor.subscribe('people', PER_PAGE * (this.page + 1));
+        this.page += 1;
+    }
     render() {
         //props.people is an array of person objects returned by the container
         //that can be used in this component
@@ -20,7 +28,7 @@ class PeopleList extends Component {
                         <PersonDetail key={people._id} people={people}/>
                     )}
                 </div>
-                <button onClick={ () => Meteor.subscribe('people', 40) }
+                <button onClick={this.handleButtonClick.bind(this)}
                         className="btn btn-primary">
                     Load More...
                 </button>
