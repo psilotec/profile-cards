@@ -1,30 +1,32 @@
 /**
  * Created by Scott on 6/16/2016.
  */
-import React from 'react';
+import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { People } from '../../imports/collections/people';
 import PersonDetail from './person_detail';
 
 const PER_PAGE = 20;
 
-const PeopleList = (props) => {
-    //props.people is an array of person objects returned by the container
-    //that can be used in this component
+class PeopleList extends Component {
+    render() {
+        //props.people is an array of person objects returned by the container
+        //that can be used in this component
 
-  return (
-      <div>
-          <div className="people-list">
-              {props.people.map(people =>
-                  <PersonDetail key={people._id} people={people}/>
-              )}
-          </div>
-          <button onClick={ () => Meteor.subscribe('people', 40) }
-            className="btn btn-primary">
-            Load More...
-          </button>
-      </div>
-  );
+        return (
+            <div>
+                <div className="people-list">
+                    {props.people.map(people =>
+                        <PersonDetail key={people._id} people={people}/>
+                    )}
+                </div>
+                <button onClick={ () => Meteor.subscribe('people', 40) }
+                        className="btn btn-primary">
+                    Load More...
+                </button>
+            </div>
+        );
+    }
 };
 
 export default createContainer(() => {
