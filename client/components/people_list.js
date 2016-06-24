@@ -16,7 +16,7 @@ class PeopleList extends Component {
         return (
             <div>
                 <div className="people-list">
-                    {props.people.map(people =>
+                    {this.props.people.map(people =>
                         <PersonDetail key={people._id} people={people}/>
                     )}
                 </div>
